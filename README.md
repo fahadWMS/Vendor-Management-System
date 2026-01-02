@@ -86,7 +86,7 @@ Before you begin, ensure you have the following installed:
 
 2. **Create and configure database**
    ```sql
-   SOURCE vendordatabase.sql;
+   SOURCE database/vendordatabase.sql;
    ```
    
    Or manually execute the SQL commands:
@@ -142,30 +142,42 @@ app.listen(PORT, () => {
 Vendor-Management-System/
 │
 ├── server.js                    # Main server file with API endpoints
-├── db.js                        # Database connection module
-├── app.js                       # Application logic
 ├── package.json                 # Project dependencies and scripts
-├── vendordatabase.sql           # Database schema and structure
+├── package-lock.json            # Locked versions of dependencies
+├── README.md                    # Project documentation
 │
-├── landing.html                 # Landing page with particle effects
-├── landing_page.css             # Landing page styles
-├── register.html                # Vendor registration page
-├── register.css                 # Registration page styles
-├── dashboard.html               # Main dashboard
-├── dashboard.css                # Dashboard styles
-├── vendor.html                  # Vendor management page
-├── vendor.css                   # Vendor page styles
-├── contracts.html               # Contract management page
-├── contracts.css                # Contract styles
-├── purchase_orders.html         # Purchase order management
-├── purchase_orders.css          # Purchase order styles
-├── budget.html                  # Budget tracking page
-├── budget.css                   # Budget styles
-├── vendor_performance.html      # Performance analytics
-├── vendor_performance.css       # Performance styles
+├── src/                         # Backend source files
+│   ├── db.js                    # Database connection module
+│   └── app.js                   # Application logic
 │
-├── particles.js                 # Particle animation library
-├── Black-Backgrounds-Desktop.jpg # Background image
+├── public/                      # Frontend static files
+│   ├── landing.html             # Landing page with particle effects
+│   ├── register.html            # Vendor registration page
+│   ├── dashboard.html           # Main dashboard
+│   ├── vendor.html              # Vendor management page
+│   ├── contracts.html           # Contract management page
+│   ├── purchase_orders.html     # Purchase order management
+│   ├── budget.html              # Budget tracking page
+│   ├── vendor_performance.html  # Performance analytics
+│   │
+│   ├── css/                     # Stylesheets
+│   │   ├── landing_page.css
+│   │   ├── register.css
+│   │   ├── dashboard.css
+│   │   ├── vendor.css
+│   │   ├── contracts.css
+│   │   ├── purchase_orders.css
+│   │   ├── budget.css
+│   │   └── vendor_performance.css
+│   │
+│   ├── js/                      # Client-side JavaScript
+│   │   └── particles.js         # Particle animation library
+│   │
+│   └── images/                  # Image assets
+│       └── Black-Backgrounds-Desktop.jpg
+│
+├── database/                    # Database scripts
+│   └── vendordatabase.sql       # Database schema and structure
 │
 └── node_modules/                # Dependencies (auto-generated)
 ```
